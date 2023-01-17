@@ -77,16 +77,6 @@ class Froggit(GameApp):
     def start(self):
         """
         Initializes the application.
-
-        This method is distinct from the built-in initializer __init__ (which
-        you should not override or change). This method is called once the
-        game is running. You should use it to initialize any game specific
-        attributes.
-
-        This method should make sure that all of the attributes satisfy the
-        given invariants. When done, it sets the _state to STATE_INACTIVE and
-        creates both the title (in attribute _title) and a message (in attribute
-        _text) saying that the user should press a key to play a game.
         """
         self._state = STATE_INACTIVE
         self._level = None
@@ -101,51 +91,6 @@ class Froggit(GameApp):
     def update(self,dt):
         """
         Updates the game objects each frame.
-
-        It is the method that does most of the work. It is NOT in charge of
-        playing the game.  That is the purpose of the class Level. The primary
-        purpose of this game is to determine the current state, and -- if the
-        game is active -- pass the input to the Level object _level to play the
-        game.
-
-        As part of the assignment, you are allowed to add your own states.
-        However, at a minimum you must support the following states:
-        STATE_INACTIVE, STATE_LOADING, STATE_ACTIVE, STATE_PAUSED,
-        STATE_CONTINUE, and STATE_COMPLETE.  Each one of these does its own
-        thing and might even needs its own helper.  We describe these below.
-
-        STATE_INACTIVE: This is the state when the application first opens.
-        It is a paused state, waiting for the player to start the game.  It
-        displays the title and a simple message on the screen. The application
-        remains in this state so long as the player never presses a key.
-
-        STATE_LOADING: This is the state that creates a new level and shows it on
-        the screen. The application switches to this state if the state was
-        STATE_INACTIVE in the previous frame, and the player pressed a key.
-        This state only lasts one animation frame (the amount of time to load
-        the data from the file) before switching to STATE_ACTIVE. One of the
-        key things about this state is that it resizes the window to match the
-        level file.
-
-        STATE_ACTIVE: This is a session of normal gameplay. The player can
-        move the frog towards the exit, and the game will move all obstacles
-        (cars and logs) about the screen. All of this should be handled inside
-        of class Level (NOT in this class).  Hence the Level class should have
-        an update() method, just like the subcontroller example in lecture.
-
-        STATE_PAUSED: Like STATE_INACTIVE, this is a paused state. However,
-        the game is still visible on the screen.
-
-        STATE_CONTINUE: This state restores the frog after it was either killed
-        or reached safety. The application switches to this state if the state
-        was STATE_PAUSED in the previous frame, and the player pressed a key.
-        This state only lasts one animation frame before switching to STATE_ACTIVE.
-
-        STATE_COMPLETE: The wave is over (all lives are lost or all frogs are safe),
-        and is either won or lost.
-
-        You are allowed to add more states if you wish. Should you do so, you should
-        describe them here.
 
         Parameter dt: The time in seconds since last update
         Precondition: dt is a number (int or float)
@@ -195,15 +140,6 @@ class Froggit(GameApp):
     def draw(self):
         """
         Draws the game objects to the view.
-
-        Every single thing you want to draw in this game is a GObject. To draw a
-        GObject g, simply use the method g.draw(self.view). It is that easy!
-
-        Many of the GObjects (such as the cars, logs, and exits) are attributes
-        in either Level or Lane. In order to draw them, you either need to add
-        getters for these attributes or you need to add a draw method to
-        those two classes.  We suggest the latter.  See the example subcontroller.py
-        from the lesson videos.
         """
         if self._state == STATE_INACTIVE:
             self._title.draw(self.view)
@@ -223,15 +159,6 @@ class Froggit(GameApp):
     def _determineState(self):
         """
         Determines the current state of the game and assigns it to self._state.
-
-        This method checks for a key press. A key press is when a key is pressed
-        for the first time. We do not want the state to continue to change
-        as we hold down the key. If the current state is STATE_INACTIVE and
-        there is a key press that is 'S', it changes the state from
-        SELF_INACTIVE to SELF_LOADING. If the current state is STATE_PAUSED and
-        there is a key press that is 'C', it changes the state from
-        STATE_PAUSED to STATE_CONTINUE. States are not changed for other key
-        presses.
         """
         # Determine current number of keys pressed
         curr_keys = self.input.key_count
@@ -258,13 +185,7 @@ class Froggit(GameApp):
     def _switchActive(self,dt):
         """
         Switches state from STATE_ACTIVE to STATE_COMPLETE or STATE_PAUSED.
-
-        If there are no lives left, the state is set to STATE_COMPLETE and
-        the screen displays "YOU DIED". If all the exits have been occupied, it
-        swtches the state to STATE_COMPLETE and the screen displays "YOU WIN".
-        If there are still lives left or unoccupied exits, the state is switched
-        to STATE_PAUSED.
-
+        
         Parameter dt: The time in seconds since last update
         Precondition: dt is a number (int or float)
         """
