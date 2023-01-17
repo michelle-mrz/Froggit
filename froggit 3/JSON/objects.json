@@ -1,0 +1,153 @@
+{
+    "images": {
+        "bigcar": {
+            "file"      : "bigcar.png",
+            "size"      : [914,264],
+            "hitbox"    : [401,105,401,105]
+        },
+        "car1": {
+            "file"      : "car1.png",
+            "size"      : [114,64],
+            "hitbox"    : [1,5,1,5]
+        },
+        "car2": {
+            "file"      : "car3.png",
+            "size"      : [114,64],
+            "hitbox"    : [1,5,1,5]
+        },
+        "car3": {
+            "file"      : "car3.png",
+            "size"      : [114,64],
+            "hitbox"    : [1,5,1,5]
+        },
+        "car4": {
+            "file"      : "car4.png",
+            "size"      : [114,64],
+            "hitbox"    : [1,5,1,5]
+        },
+        "car5": {
+            "file"      : "car5.png",
+            "size"      : [114,64],
+            "hitbox"    : [1,5,1,5]
+        },
+        "car6": {
+            "file"      : "car6.png",
+            "size"      : [114,64],
+            "hitbox"    : [1,5,1,5]
+        },
+        "truck1": {
+            "file"      : "truck1.png",
+            "size"      : [154,70],
+            "hitbox"    : [1,6,1,6]
+        },
+        "truck1": {
+            "file"      : "truck1.png",
+            "size"      : [154,70],
+            "hitbox"    : [1,6,1,6]
+        },
+        "truck2": {
+            "file"      : "truck2.png",
+            "size"      : [154,64],
+            "hitbox"    : [1,3,1,3]
+        },
+        "truck3": {
+            "file"      : "truck3.png",
+            "size"      : [154,66],
+            "hitbox"    : [1,3,1,3]
+        },
+        "trailer1": {
+            "file"      : "trailer1.png",
+            "size"      : [260,70],
+            "hitbox"    : [1,3,1,3]
+        },
+        "trailer2": {
+            "file"      : "trailer2.png",
+            "size"      : [260,70],
+            "hitbox"    : [1,3,1,3]
+        },
+        "flatbed": {
+            "file"      : "flatbed.png",
+            "size"      : [265,72],
+            "hitbox"    : [1,6,1,6]
+        },
+        "biglog": {
+            "file"      : "biglog.png",
+            "size"      : [928,264],
+            "hitbox"    : [400,102,400,102]
+        },        
+        "log1": {
+            "file"      : "log1.png",
+            "size"      : [64,64],
+            "hitbox"    : [0,2,0,2]
+        },
+        "log2": {
+            "file"      : "log2.png",
+            "size"      : [128,64],
+            "hitbox"    : [0,2,0,2]
+        },
+        "log3": {
+            "file"      : "log3.png",
+            "size"      : [192,64],
+            "hitbox"    : [0,2,0,2]
+        },
+        "log4": {
+            "file"      : "log4.png",
+            "size"      : [256,64],
+            "hitbox"    : [0,2,0,2]
+        },
+        "log5": {
+            "file"      : "log5.png",
+            "size"      : [320,64],
+            "hitbox"    : [0,2,0,2]
+        },
+        "exit": {
+            "file"      : "exit.png",
+            "size"      : [64,64],
+            "hitbox"    : [5,10,5,0]
+        },
+        "open": {
+            "file"      : "open.png",
+            "size"      : [64,64],
+            "hitbox"    : [5,0,5,0]
+        },
+        "frog": {
+            "file"      : "frog1.png",
+            "size"      : [52,38],
+            "hitbox"    : [1,2,2,2]
+        }
+    },
+    "sprites": {
+        "frog": {
+            "file"      : "frog2.png",
+            "size"      : [50,95],
+            "format"    : [1,5],
+            "hitboxes"  : [
+                [5,29,5,30],
+                [2,26,2,26],
+                [2,17,2,24],
+                [3,7,3,22],
+                [3,1,3,20]
+            ]
+        },
+        "skulls": {
+            "file"      : "skulls.png",
+            "size"      : [64,64],
+            "format"    : [2,4]
+        },
+        "turtle": {
+            "file"      : "turtle.png",
+            "size"      : [72,72],
+            "format"    : [2,4],
+            "hitboxes"  : [
+                [1,8,2,9],
+                [1,5,2,6],
+                [1,4,2,3],
+                [1,2,2,2],
+                [1,8,2,9],
+                [12,20,17,20],
+                [21,23,20,25],
+                [24,29,29,27]
+            ]
+        }
+    }
+}
