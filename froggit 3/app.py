@@ -6,7 +6,7 @@ is no need for any additional classes in this module.  If you need more classes,
 of the time they belong in either the lanes module or the models module. If you are
 unsure about where a new class should go, post a question on Piazza.
 
-# Michelle Ren Zhang [mr897]
+# Michelle Ren Zhang 
 # 12.21.20
 """
 from consts import *
@@ -15,10 +15,6 @@ from level import *
 import introcs
 
 from kivy.logger import Logger
-
-# hkdjfhskdjfhksjdhf
-
-
 
 # PRIMARY RULE: Froggit can only access attributes in level.py via getters/setters
 # Froggit is NOT allowed to access anything in lanes.py or models.py.
