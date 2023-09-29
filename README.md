@@ -1,3 +1,3 @@
 # Froggit
 
-A recreation of the Frogger arcade game written in Python.
+Recreation of the Frogger arcade game written in Python.
